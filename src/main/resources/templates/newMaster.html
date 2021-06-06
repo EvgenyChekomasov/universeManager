@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Добавление Повелителя</title>
+</head>
+<body>
+<!--/*@thymesVar id="master" type="com.example.universeManager.entity.MasterEntity"*/-->
+<form th:method="POST" th:action="@{/masters}" th:object="${master}">
+    <label for="name">Имя Повелителя</label>
+    <input type="text" th:field="*{name}" id="name" />
+    <br>
+    <label for="age">Возраст</label>
+    <input type="number" th:field="*{age}" id="age" />
+    <br>
+    <input type="submit" value="Создать" />
+</form>
+</body>
+</html>

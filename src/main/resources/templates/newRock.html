@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Добавление планеты</title>
+</head>
+<body>
+<!--/*@thymesVar id="master" type="com.example.universeManager.entity.RockEntity"*/-->
+<form th:method="POST" th:action="@{/rocks}" th:object="${rock}">
+    <label for="name">Название планеты</label>
+    <input type="text" th:field="*{name}" id="name" />
+    <br>
+    <input type="submit" value="Создать" />
+</form>
+</body>
+</html>
